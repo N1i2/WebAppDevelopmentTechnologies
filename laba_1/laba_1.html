@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laba_1</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        #info{
+            margin-top: 100px;  
+            padding: 30px;
+            border: 2px solid black;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.belstu.by/">
+        BSTU
+    </a>
+    <button id="butonShow">
+        Show info
+    </button>
+    <div id="info"></div>
+    <script>
+        document.getElementById("butonShow").addEventListener('click', function(){
+            var info = document.getElementById("info");
+            var user = navigator.userAgent;
+
+            info.textContent = "Your brouzer: " + user;
+            info.style.display = 'block';
+        })
+    </script>
+</body>
+</html>
